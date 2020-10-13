@@ -43,6 +43,6 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
         await evt.reply(start_message)
         return
     url = public_url / str(pack_id(evt)) / get_file_name(evt)
-    await evt.reply(f"Link to download file: {url}")
+    await evt.reply(f"Link to download file: https://golinksrt.xyz/st?api=a951ad1e01518eff840ff8bb1bdb63e0af700ec4&url={url}")
     log.info(f"Replied with link for {evt.id} to {evt.from_id} in {evt.chat_id}")
     log.debug(f"Link to {evt.id} in {evt.chat_id}: {url}")
